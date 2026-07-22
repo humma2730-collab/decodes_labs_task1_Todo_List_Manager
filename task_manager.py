@@ -122,9 +122,9 @@ def delete_task():
                 print("\nDelete cancelled.")
             return
     print("Task ID not found.")
-    # ------------------------------------------
+    
 # Mark Task as Completed
-# ------------------------------------------
+
 def mark_task_completed():
     """
     Mark a task as completed.
@@ -160,13 +160,10 @@ def mark_task_completed():
             return
 
     print("Task ID not found.")
-    # ------------------------------------------
 # Search Task
-# ------------------------------------------
+
 def search_task():
-    """
-    Search tasks by title.
-    """
+
     tasks = load_tasks()
 
     if not tasks:
@@ -181,7 +178,7 @@ def search_task():
 
     found = False
 
-    print("\n========== SEARCH RESULTS ==========")
+    print("\n******** SEARCH RESULTS ********")
 
     for task in tasks:
 
@@ -200,13 +197,10 @@ def search_task():
         print("No matching task found.")
 
     print("-" * 50)
-    # ------------------------------------------
+
 # Task Statistics
-# ------------------------------------------
 def task_statistics():
-    """
-    Display task statistics.
-    """
+    
     tasks = load_tasks()
 
     total = len(tasks)
@@ -215,10 +209,8 @@ def task_statistics():
         1 for task in tasks
         if task["status"] == "Completed"
     )
-
     pending = total - completed
-
-    print("\n========== TASK STATISTICS ==========")
+    print("\n*********  TASK STATISTICS   **********")
     print(f"Total Tasks      : {total}")
     print(f"Completed Tasks  : {completed}")
     print(f"Pending Tasks    : {pending}")
